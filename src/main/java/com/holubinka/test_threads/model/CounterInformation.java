@@ -4,7 +4,6 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "counter_log")
 public class CounterInformation {
 
     @Id
@@ -13,11 +12,8 @@ public class CounterInformation {
 
     private LocalDateTime reachedAt;
 
-    public CounterInformation(LocalDateTime reachedAt) {
-        this.reachedAt = reachedAt;
-    }
-
     public CounterInformation() {
+        this.reachedAt = LocalDateTime.now();
     }
 
     public Long getId() {

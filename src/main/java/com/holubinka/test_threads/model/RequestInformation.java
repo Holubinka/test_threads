@@ -1,10 +1,11 @@
 package com.holubinka.test_threads.model;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
-import javax.servlet.http.HttpServletRequest;
 
 @Entity
-@Table(name = "request_log")
+@Component
 public class RequestInformation {
 
     @Id
@@ -13,24 +14,17 @@ public class RequestInformation {
 
     private String url;
 
-    private String remoteHost;
-
     private String method;
 
     private String uri;
 
-    public RequestInformation(HttpServletRequest request) {
-        this.url = request.getRequestURL().toString();
-        this.remoteHost = request.getRemoteHost();
-        this.method = request.getMethod();
-        this.uri = request.getRequestURI();
-    }
+    private String queryString;
 
-    public RequestInformation(String url, String remoteHost, String method, String uri) {
+    public RequestInformation(String url, String method, String uri, String queryString) {
         this.url = url;
-        this.remoteHost = remoteHost;
         this.method = method;
         this.uri = uri;
+        this.queryString = queryString;
     }
 
     public RequestInformation() {
@@ -52,14 +46,6 @@ public class RequestInformation {
         this.url = url;
     }
 
-    public String getRemoteHost() {
-        return remoteHost;
-    }
-
-    public void setRemoteHost(String remoteHost) {
-        this.remoteHost = remoteHost;
-    }
-
     public String getMethod() {
         return method;
     }
@@ -74,5 +60,13 @@ public class RequestInformation {
 
     public void setUri(String uri) {
         this.uri = uri;
+    }
+
+    public String getQueryString() {
+        return queryString;
+    }
+
+    public void setQueryString(String queryString) {
+        this.queryString = queryString;
     }
 }

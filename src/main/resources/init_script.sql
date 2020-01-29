@@ -1,14 +1,17 @@
-create table counter_info
+create table counter_information
 (
-  reached_at TIMESTAMP
+    id         bigint auto_increment
+        primary key,
+    reached_at TIMESTAMP
 );
 
-create table request_info
+create table request_information
 (
-  id              bigint auto_increment
-    primary key,
-  header_names    TEXT,
-  remote_host     TEXT,
-  query_string    TEXT,
-  attribute_names TEXT
+    id          bigint auto_increment
+        primary key,
+    url         TEXT,
+    remote_host TEXT,
+    method      TEXT,
+    uri         TEXT,
+    query_string TEXT
 )
