@@ -1,4 +1,4 @@
 FROM openjdk:8
-ADD target/spring-boot-test.jar spring-boot-test.jar
+ADD target/user-mysql.jar user-mysql.jar
 EXPOSE 8086
-ENTRYPOINT ["java", "-jar", "spring-boot-test.jar"]
+ENTRYPOINT ["java", "-jar", "user-mysql.jar"]
