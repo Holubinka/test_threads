@@ -14,18 +14,18 @@ c. Using MySQL, persist the request's information received by the app to the dat
 d. The producer threads will increase the value of the counter while the consumer threads will decrease it.
 e. Print in the console the current value of the counter when it changes and print which producer/consumer is responsible for the change.
 
-Counter value: 51. Counter was increment by: producer_5
-Counter value: 50. Counter was decrement by: consumer_3
-Counter value: 49. Counter was decrement by: consumer_9
-Counter value: 48. Counter was decrement by: consumer_1
-Counter value: 49. Counter was increment by: producer_1
-Counter value: 50. Counter was increment by: producer_6
-.......................................................
-Counter value: 2. Counter was increment by: producer_3
-Counter value: 1. Counter was decrement by: consumer_8
-Counter value: 2. Counter was increment by: producer_8
-Counter value: 1. Counter was decrement by: consumer_4
-Counter value: 0. Counter was decrement by: consumer_11
+        Counter value: 51. Counter was increment by: producer_5
+        Counter value: 50. Counter was decrement by: consumer_3
+        Counter value: 49. Counter was decrement by: consumer_9
+        Counter value: 48. Counter was decrement by: consumer_1
+        Counter value: 49. Counter was increment by: producer_1
+        Counter value: 50. Counter was increment by: producer_6
+        .......................................................
+        Counter value: 2. Counter was increment by: producer_3
+        Counter value: 1. Counter was decrement by: consumer_8
+        Counter value: 2. Counter was increment by: producer_8
+        Counter value: 1. Counter was decrement by: consumer_4
+        Counter value: 0. Counter was decrement by: consumer_11
 
 f. The threads will run in parallel and continue until the counter reaches 0 or 100. Persist in the database the timestamp when the counter reaches 0 or 100.
 g. Create another ENDPOINT that will receive one parameter, the parameter will change the current value of the counter.
