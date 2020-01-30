@@ -31,10 +31,10 @@ f. The threads will run in parallel and continue until the counter reaches 0 or 
 g. Create another ENDPOINT that will receive one parameter, the parameter will change the current value of the counter.
   The response will be HTTP 200 Ok success status.
   
-  http://localhost:8086/counter?counterValue=50
+      http://localhost:8086/counter?counterValue=50
    
    // As in task description, 
-   counterValue -- value that change current counter
+   counterValue -- parameter that change current counter
   
 h. Spring Boot App is dockerized:
 
