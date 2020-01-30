@@ -49,5 +49,12 @@ To be possible run project under docker:
 ``    
 ``    docker run -p 8086:8086 --name user-mysql --link mysqldbtest:mysql -d user-mysql`
 ``
+You can pull project from docker hub :
+`        docker pull dockerua5/user-mysql:latest
+`
+and run this project by 
+        `docker run -it -p 8086:8086 dockerua5/user-mysql:latest`
+
+
 
 Please feel to free to contact me if you will have more questions: vitalii.holubinka@crystalogic.net
