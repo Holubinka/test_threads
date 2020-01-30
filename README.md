@@ -44,9 +44,10 @@ To be possible run project under docker:
     b) Update application properties with mysql container credentials. 
 2) Build jar file in Spring Boot with Maven
 3) Standard  docker build and run:
-    docker build . -t user-mysql   // where 'user-mysql' is name of project .jar
-    
-    docker run -p 8086:8086 --name user-mysql --link mysqldbtest:mysql -d user-mysql
 
+``    `docker build . -t user-mysql   // where 'user-mysql' is name of project .jar
+``    
+``    docker run -p 8086:8086 --name user-mysql --link mysqldbtest:mysql -d user-mysql`
+``
 
 Please feel to free to contact me if you will have more questions: vitalii.holubinka@crystalogic.net
